@@ -1,0 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Target the button and the off-canvas panel
+    const button = document.querySelector('.header_contact');
+    const offCanvas = document.querySelector('#off-canvas-12c3ef1');
+    
+    if (button && offCanvas) {
+        button.addEventListener('click', function () {
+            // Toggle the 'aria-hidden' attribute
+            const isHidden = offCanvas.getAttribute('aria-hidden') === 'true';
+            offCanvas.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
+        });
+    }
+});
